@@ -7,10 +7,13 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
+<body class="bg-white">
 
-<nav class="bg-indigo-700 text-white p-4 flex justify-between">
-  <h1 class="text-2xl font-bold">IVARS</h1>
+<nav class="bg-while-700 text-indigo p-4 flex justify-between items-center">
+  <a href="index.html" class="flex items-center gap-3">
+    <img src="assets/ivars_logo_final.png" alt="IVARS - Institute of Vastu and Research Academy logo" class="h-20">
+    <span class="ml-2 text-3xl font-semibold">Institute of Vastu and Astro Research Studies</span>
+  </a>
   <div class="flex gap-6">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -25,10 +28,10 @@
 <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/banner1.png" class="d-block w-100">
+      <img src="assets/banner_2_new.png" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="assets/banner2.png" class="d-block w-100">
+      <img src="assets/banner_1_new.jpg" class="d-block w-100">
     </div>
     <div class="carousel-item">
       <img src="assets/banner3.png" class="d-block w-100">
@@ -45,21 +48,85 @@
 <section class="max-w-6xl mx-auto p-6">
   <h2 class="text-3xl font-bold mb-6">Welcome to IVARS</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div class="bg-white p-6 rounded-xl shadow-xl">
-      <h3 class="font-bold text-xl">Vastu Remedies</h3>
-      <p>Scientific non-demolition solutions.</p>
+    <!-- Card: Vastu Remedies -->
+    <div class="rounded-xl transform hover:-translate-y-2 transition duration-300 hover:shadow-2xl">
+  <a href="services.html" class="block bg-white p-6 rounded-xl h-full border border-gray-200 border-l-4 border-indigo-500 hover:border-gray-300 transition-colors">
+        <div class="flex items-start gap-4">
+          <div class="p-3 bg-indigo-50 text-indigo-600 rounded-lg">
+            <!-- house icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10l9-7 9 7v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4H9v4a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl">Vastu Remedies</h3>
+            <p class="text-gray-600 mt-2">Scientific, <strong>non-demolition</strong> solutions to harmonize spaces and improve energy flow for homes and offices.</p>
+            <div class="mt-4 text-indigo-600 font-semibold">Learn more →</div>
+          </div>
+        </div>
+      </a>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow-xl">
-      <h3 class="font-bold text-xl">Astrology & Numerology</h3>
-      <p>Birth chart, name correction, predictions.</p>
+
+    <!-- Card: Astrology & Numerology -->
+    <div class="rounded-xl transform hover:-translate-y-2 transition duration-300 hover:shadow-2xl">
+  <a href="services.html" class="block bg-white p-6 rounded-xl h-full border border-gray-200 border-l-4 border-pink-500 hover:border-gray-300 transition-colors">
+        <div class="flex items-start gap-4">
+          <div class="p-3 bg-pink-50 text-pink-600 rounded-lg">
+            <!-- star/astrology icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l.518 1.59a1 1 0 0 0 .95.69h1.67c.969 0 1.371 1.24.588 1.81l-1.352.98a1 1 0 0 0-.364 1.118l.518 1.59c.3.921-.755 1.688-1.539 1.118l-1.352-.98a1 1 0 0 0-1.176 0l-1.352.98c-.784.57-1.838-.197-1.539-1.118l.518-1.59a1 1 0 0 0-.364-1.118l-1.352-.98C2.87 6.447 3.271 5.207 4.24 5.207h1.67a1 1 0 0 0 .95-.69l.518-1.59z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl">Astrology & Numerology</h3>
+            <p class="text-gray-600 mt-2">Birth chart readings, <strong>name correction</strong>, KP Astrology and personalized numerology to guide decisions and timing.</p>
+            <div class="mt-4 text-pink-600 font-semibold">Learn more →</div>
+          </div>
+        </div>
+      </a>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow-xl">
-      <h3 class="font-bold text-xl">Training & Certifications</h3>
-      <p>Online + offline courses.</p>
+
+    <!-- Card: Training & Certifications -->
+    <div class="rounded-xl transform hover:-translate-y-2 transition duration-300 hover:shadow-2xl">
+  <a href="education.html" class="block bg-white p-6 rounded-xl h-full border border-gray-200 border-l-4 border-green-500 hover:border-gray-300 transition-colors">
+        <div class="flex items-start gap-4">
+          <div class="p-3 bg-green-50 text-green-600 rounded-lg">
+            <!-- cap icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0 1 21 12.18v3.295A2.5 2.5 0 0 1 18.5 18h-13A2.5 2.5 0 0 1 3 15.475v-3.295c0-.23.02-.458.06-.682L9 14"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl">Training & Certifications</h3>
+            <p class="text-gray-600 mt-2">Structured <strong>online & offline</strong> courses from beginner to advanced with certification and practical case studies.</p>
+            <div class="mt-4 text-green-600 font-semibold">Learn more →</div>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
+<footer class="bg-gray-800 text-white mt-12">
+  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="assets/ivars_logo.svg" alt="IVARS logo" class="h-10">
+      <div>
+  <div class="font-semibold">Institute of Vastu and Astro Research Studies</div>
+        <div class="text-sm text-gray-300">Add value and impact lives</div>
+      </div>
+    </div>
+    <div class="mt-4 md:mt-0 text-sm text-gray-300">
+      <a href="contact.html" class="hover:text-white mr-4">Contact</a>
+      <a href="about.html" class="hover:text-white mr-4">About</a>
+      <a href="services.html" class="hover:text-white">Services</a>
+    </div>
+  </div>
+  <div class="text-center text-sm text-gray-400 py-3">© <span id="year">2025</span> IVARS — All rights reserved.</div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

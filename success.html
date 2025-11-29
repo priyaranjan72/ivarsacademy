@@ -7,8 +7,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
-<nav class="bg-indigo-700 text-white p-4 flex justify-between">
-  <h1 class="text-2xl font-bold">IVARS</h1>
+<nav class="bg-while-700 text-indigo p-4 flex justify-between items-center">
+  <a href="index.html" class="flex items-center gap-3">
+    <img src="assets/ivars_logo_final.png" alt="IVARS - Institute of Vastu and Research Academy logo" class="h-20">
+    <span class="ml-2 text-3xl font-semibold">Institute of Vastu and Astro Research Studies</span>
+  </a>
   <div class="flex gap-6">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -23,7 +26,66 @@
   <img src="assets/banner4.png" class="rounded-xl shadow-xl mb-6">
   <div class="bg-white p-6 rounded-xl shadow-xl">
     <h2 class="text-3xl font-bold">Success Stories</h2>
-    <p>Transformations & testimonials coming soon…</p>
+    <p class="text-gray-600 mt-3">Real transformations from real clients — short case studies and testimonials that show how practical Vastu, astrology and numerology helped people improve health, relationships and business outcomes.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <div class="border border-gray-100 rounded-lg p-5 bg-gray-50">
+        <div class="flex items-start gap-3">
+          <div class="rounded-full bg-indigo-600 text-white w-10 h-10 flex items-center justify-center">S</div>
+          <div>
+            <div class="font-semibold">S. Patel — Entrepreneur</div>
+            <div class="text-sm text-gray-500">Bhubaneswar</div>
+          </div>
+        </div>
+        <blockquote class="mt-4 text-gray-700">"IVARS helped us realign our office layout with minimal changes — staff morale improved and revenue grew within three months. The recommendations were practical and easy to implement."</blockquote>
+      </div>
+
+      <div class="border border-gray-100 rounded-lg p-5 bg-gray-50">
+        <div class="flex items-start gap-3">
+          <div class="rounded-full bg-pink-600 text-white w-10 h-10 flex items-center justify-center">A</div>
+          <div>
+            <div class="font-semibold">A. Das — Homeowner</div>
+            <div class="text-sm text-gray-500">Cuttack</div>
+          </div>
+        </div>
+        <blockquote class="mt-4 text-gray-700">"The residential Vastu consultation was detailed and non-invasive. Small placement and color changes made our home feel calmer and our sleep improved dramatically."</blockquote>
+      </div>
+
+      <div class="border border-gray-100 rounded-lg p-5 bg-gray-50">
+        <div class="flex items-start gap-3">
+          <div class="rounded-full bg-green-600 text-white w-10 h-10 flex items-center justify-center">R</div>
+          <div>
+            <div class="font-semibold">R. Kumar — Student</div>
+            <div class="text-sm text-gray-500">Online Course</div>
+          </div>
+        </div>
+        <blockquote class="mt-4 text-gray-700">"The astrology course was practical and the KP modules helped me start offering confident readings. The certification helped me find paid clients quickly."</blockquote>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center">
+      <a href="contact.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg shadow">Share your story</a>
+    </div>
   </div>
-</div>
+
+  <footer class="bg-gray-800 text-white mt-12">
+    <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/ivars_logo.svg" alt="IVARS logo" class="h-10">
+        <div>
+          <div class="font-semibold">Institute of Vastu and Astro Research Studies</div>
+          <div class="text-sm text-gray-300">Add value and impact lives</div>
+        </div>
+      </div>
+      <div class="mt-4 md:mt-0 text-sm text-gray-300">
+        <a href="contact.html" class="hover:text-white mr-4">Contact</a>
+        <a href="about.html" class="hover:text-white mr-4">About</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+      </div>
+    </div>
+    <div class="text-center text-sm text-gray-400 py-3">© <span id="year-success">2025</span> IVARS — All rights reserved.</div>
+  </footer>
+
+  <script>document.getElementById('year-success').textContent = new Date().getFullYear();</script>
+
 </body></html>

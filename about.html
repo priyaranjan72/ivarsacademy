@@ -7,8 +7,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
-<nav class="bg-indigo-700 text-white p-4 flex justify-between">
-  <h1 class="text-2xl font-bold">IVARS</h1>
+<nav class="bg-while-700 text-indigo p-4 flex justify-between items-center">
+  <a href="index.html" class="flex items-center gap-3">
+    <img src="assets/ivars_logo_final.png" alt="IVARS - Institute of Vastu and Research Academy logo" class="h-20">
+    <span class="ml-2 text-3xl font-semibold">Institute of Vastu and Astro Research Studies</span>
+  </a>
   <div class="flex gap-6">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -22,14 +25,62 @@
 <div class="max-w-5xl mx-auto p-6">
   <img src="assets/banner1.png" class="rounded-xl shadow-xl mb-6">
   <div class="bg-white p-6 rounded-xl shadow-xl">
-    <h2 class="text-3xl font-bold mb-4">About Us</h2>
-    <p>IVARS is a premier institute offering Vastu, Astrology, Numerology consultation and certified courses.</p>
-    <ul class="list-disc pl-6 mt-4">
-      <li>Non-demolition Vastu remedies</li>
-      <li>Scientific scanning tools</li>
-      <li>Expert faculties</li>
-      <li>Online + offline training</li>
-    </ul>
+    <h2 class="text-3xl font-bold mb-2">About Us</h2>
+    <p class="text-indigo-600 font-semibold mb-4">Institute of Vastu and Astro Research Studies (IVARS)</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Main content -->
+      <div class="md:col-span-2">
+        <p class="text-gray-700"><strong>IVARS</strong> blends ancient wisdom with modern analytical approaches to provide practical, research-backed solutions in <strong>Vastu Shastra, Astrology,</strong> and <strong>Numerology</strong>. Our mission is to <strong>add value and impact lives</strong> through consultations, education and remedial programs that prioritise authenticity over superstition.</p>
+
+        <p class="text-gray-700 mt-4">We emphasise a <strong>research-oriented methodology</strong>: every consultation and course is rooted in observation, measurement and proven principles. Our non-demolition remedies and tailored plans focus on wellbeing, harmony and measurable outcomes for homes, businesses and individuals.</p>
+
+        <p class="text-gray-700 mt-4">Our team of <strong>trained consultants, researchers and faculty</strong> bring domain experience across KP Astrology, Vastu mapping, numerology and energy sciences. Through personalised guidance and structured learning, we help learners and clients achieve growth, balance and professional competence.</p>
+
+        <div class="mt-6">
+          <a href="contact.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg shadow">Book a consultation</a>
+          <a href="education.html" class="ml-4 text-indigo-600 font-semibold">Explore courses →</a>
+        </div>
+      </div>
+
+      <!-- Highlights / cards -->
+      <div class="space-y-4">
+        <div class="border border-gray-100 rounded-lg p-4 bg-indigo-50">
+          <div class="font-semibold text-indigo-700">Research-driven</div>
+          <div class="text-sm text-gray-700 mt-2">Evidence-based scans, instruments and analysis underpin our recommendations and training.</div>
+        </div>
+
+        <div class="border border-gray-100 rounded-lg p-4 bg-green-50">
+          <div class="font-semibold text-green-700">Non-demolition Remedies</div>
+          <div class="text-sm text-gray-700 mt-2">Practical fixes like placement, color therapy and energy devices that avoid structural changes.</div>
+        </div>
+
+        <div class="border border-gray-100 rounded-lg p-4 bg-pink-50">
+          <div class="font-semibold text-pink-700">Certified Faculty</div>
+          <div class="text-sm text-gray-700 mt-2">Experienced trainers and consultants offering both classroom and online mentorship.</div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  </div>
+
+  <footer class="bg-gray-800 text-white mt-12">
+    <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/ivars_logo.svg" alt="IVARS logo" class="h-10">
+        <div>
+          <div class="font-semibold">Institute of Vastu and Astro Research Studies</div>
+          <div class="text-sm text-gray-300">Add value and impact lives</div>
+        </div>
+      </div>
+      <div class="mt-4 md:mt-0 text-sm text-gray-300">
+        <a href="contact.html" class="hover:text-white mr-4">Contact</a>
+        <a href="index.html" class="hover:text-white mr-4">Home</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+      </div>
+    </div>
+    <div class="text-center text-sm text-gray-400 py-3">© <span id="year-about">2025</span> IVARS — All rights reserved.</div>
+  </footer>
+
+  <script>document.getElementById('year-about').textContent = new Date().getFullYear();</script>
 </body></html>
