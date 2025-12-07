@@ -461,44 +461,93 @@
     var todayEl = document.getElementById('todayVisits');
     var namespace = 'ivarsacademy';
     var totalKey = 'visitors_total';
-    var todayKey = 'visitors_' + new Date().toISOString().slice(0,10);
+    // Compute current date string in IST (UTC+5:30) so "today" resets at IST midnight
+    function getISTDateStr(){
+      var now = new Date();
+      // IST is UTC+5:30 => add 5.5 hours to UTC time
+      var istOffset = 5.5 * 60 * 60 * 1000;
+      var ist = new Date(now.getTime() + istOffset);
+      return ist.toISOString().slice(0,10);
+    }
+    var istDate = getISTDateStr();
+    var todayKey = 'visitors_' + istDate;
 
     function setValues(total, today){
       if(totalEl) totalEl.textContent = total != null ? total : '—';
       if(todayEl) todayEl.textContent = today != null ? today : '—';
     }
 
-    // fallback localStorage increment
-    function fallbackCounts(){
-      try{
-        var tKey = 'local_total_visits';
-        var dKey = 'local_today_visits_' + new Date().toISOString().slice(0,10);
-        var total = parseInt(localStorage.getItem(tKey) || '0',10) + 1;
-        localStorage.setItem(tKey, total);
-        var today = parseInt(localStorage.getItem(dKey) || '0',10) + 1;
-        localStorage.setItem(dKey, today);
-        setValues(total, today);
-      } catch(e){
-        setValues(null, null);
-      }
+    // Helpers for local storage
+    function localSnapshot(){
+      var tKey = 'local_total_visits';
+      var dKey = 'local_today_visits_' + istDate;
+      return {
+        total: parseInt(localStorage.getItem(tKey) || '0',10),
+        today: parseInt(localStorage.getItem(dKey) || '0',10),
+        tKey: tKey,
+        dKey: dKey
+      };
     }
 
-    // Try CountAPI for site-wide counts; increment both total and today's counter
-    // If this fails (network or CORS), fall back to localStorage per-browser counters.
+    // Only increment once per browser session (avoid double increments on refresh)
+    var sessionFlag = 'ivars_counted';
+
     (async function(){
       try{
-        var resToday = await fetch('https://api.countapi.xyz/hit/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(todayKey));
-        var dataToday = await resToday.json();
-        var resTotal = await fetch('https://api.countapi.xyz/hit/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(totalKey));
-        var dataTotal = await resTotal.json();
-        if(dataTotal && dataToday && !dataTotal.error && !dataToday.error){
-          setValues(dataTotal.value, dataToday.value);
-          return;
+        // If not counted this session, try to increment via CountAPI (hit)
+        if(!sessionStorage.getItem(sessionFlag)){
+          try{
+            var [resToday, resTotal] = await Promise.all([
+              fetch('https://api.countapi.xyz/hit/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(todayKey)),
+              fetch('https://api.countapi.xyz/hit/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(totalKey))
+            ]);
+            var dataToday = await resToday.json();
+            var dataTotal = await resTotal.json();
+            if(!dataToday.error && !dataTotal.error){
+              setValues(dataTotal.value, dataToday.value);
+              // persist a local snapshot for offline fallback
+              try{ localStorage.setItem('local_total_visits', dataTotal.value); localStorage.setItem('local_today_visits_' + istDate, dataToday.value); }catch(e){}
+              sessionStorage.setItem(sessionFlag, '1');
+              return;
+            }
+          } catch(e){
+            // continue to GET or fallback
+          }
         }
-        // otherwise fallback
-        fallbackCounts();
+
+        // If already counted this session or hit failed, try to GET current values without incrementing
+        try{
+          var [getTotalRes, getTodayRes] = await Promise.all([
+            fetch('https://api.countapi.xyz/get/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(totalKey)),
+            fetch('https://api.countapi.xyz/get/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(todayKey))
+          ]);
+          var getTotal = await getTotalRes.json();
+          var getToday = await getTodayRes.json();
+          if(!getTotal.error && !getToday.error){
+            setValues(getTotal.value, getToday.value);
+            try{ localStorage.setItem('local_total_visits', getTotal.value); localStorage.setItem('local_today_visits_' + istDate, getToday.value); }catch(e){}
+            return;
+          }
+        } catch(e){
+          // fall through to local fallback
+        }
+
+        // Final fallback: use localStorage and increment only if not counted this session
+        var snap = localSnapshot();
+        if(!sessionStorage.getItem(sessionFlag)){
+          var total = snap.total + 1;
+          var today = snap.today + 1;
+          try{ localStorage.setItem(snap.tKey, total); localStorage.setItem(snap.dKey, today); }catch(e){}
+          sessionStorage.setItem(sessionFlag, '1');
+          setValues(total, today);
+        } else {
+          setValues(snap.total, snap.today);
+        }
+
       } catch(e){
-        fallbackCounts();
+        // Unexpected error: attempt best-effort local fallback
+        var snap = localSnapshot();
+        setValues(snap.total, snap.today);
       }
     })();
   })();
