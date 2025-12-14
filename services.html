@@ -12,23 +12,27 @@
     .fade-slide.in-view { opacity: 1; transform: translateY(0); }
     /* Make primary headers red */
     h1,h2,h3 { color: #dc2626; }
+
+    /* Site canvas: full-page ivory background and a soft transition into white content */
+    body { background-color: #FFFFF0; }
+    .main-canvas { background: #FFFFF0; }
   </style>
 </head>
-<body class="bg-gray-100">
-<nav class="bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 text-white shadow-lg">
+<body>
+<nav class="bg-gradient-to-r from-sky-200 via-sky-700 to-slate-900 text-white shadow-md">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Top row: logo + institute name (no-wrap) + small tagline -->
     <div class="flex items-center justify-between py-3 md:py-5">
       <a href="index.html" class="flex items-center gap-3">
-  <img src="assets/ivars_logo_final.png" alt="Institute of Vastu and Astro Research Studies logo" class="h-10 md:h-20 lg:h-24 bg-pink-50 p-1 md:p-2 rounded-md ring-2 ring-pink-200 shadow-sm flex-shrink-0">
+  <img src="assets/ivars_logo_final.png" alt="Institute of Vastu and Astro Research Studies logo" class="h-10 md:h-20 lg:h-24 flex-shrink-0" style="background: transparent; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));">
         <div class="hidden sm:flex flex-col ml-3">
-          <span class="text-sm md:text-lg lg:text-xl font-semibold uppercase tracking-wide text-white drop-shadow whitespace-nowrap">Institute of Vastu and Astro Research Studies</span>
-          <span class="text-xs text-white/80 italic">Adding Value, Impacting lives.</span>
+          <span class="text-sm md:text-lg lg:text-xl font-semibold uppercase tracking-wide text-slate-900 whitespace-nowrap">Institute of Vastu and Astro Research Studies</span>
+          <span class="text-xs text-slate-700 italic">Adding Value, Impacting lives.</span>
         </div>
       </a>
 
       <div class="hidden md:flex items-center gap-4">
-        <a href="contact.html" class="inline-block bg-white text-purple-700 px-4 py-2 rounded-full font-semibold shadow hover:opacity-95">Book</a>
+        <a href="contact.html" class="inline-block bg-white text-slate-900 px-4 py-2 rounded-full font-semibold shadow hover:opacity-95">Book Appointment</a>
       </div>
 
       <div class="md:hidden">
@@ -49,7 +53,7 @@
     </div>
 
     <!-- Mobile menu (unchanged) -->
-    <div id="mobileMenu" class="md:hidden hidden pb-4 bg-gradient-to-b from-purple-600 to-indigo-600 rounded-b-lg mt-2">
+    <div id="mobileMenu" class="md:hidden hidden pb-4 bg-gradient-to-b from-slate-800 to-slate-900 rounded-b-lg mt-2">
       <a href="index.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Home</a>
       <a href="about.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">About</a>
       <a href="services.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Services</a>
@@ -57,13 +61,13 @@
       <a href="success.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Success Stories</a>
       <a href="contact.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Contact</a>
       <div class="px-4 pt-2 pb-4">
-        <a href="contact.html" class="block w-full text-center bg-white text-purple-700 px-4 py-2 rounded-full font-semibold">Book a consult</a>
+        <a href="contact.html" class="block w-full text-center bg-white text-slate-900 px-4 py-2 rounded-full font-semibold">Book a consult</a>
       </div>
     </div>
   </div>
 </nav>
 
-<div class="max-w-5xl mx-auto p-6">
+<div class="max-w-5xl mx-auto p-6 main-canvas">
   <img src="assets/banner2.png" class="rounded-xl shadow-xl mb-6">
 
   <section class="bg-white p-6 rounded-xl shadow-xl">
@@ -189,13 +193,13 @@
     </div>
   </section>
 
-  <footer class="bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 text-white mt-12">
+  <footer class="bg-gradient-to-r from-sky-200 via-sky-700 to-slate-900 text-white mt-12">
     <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
       <div class="flex items-center gap-3">
-        <img src="assets/ivars_logo_final.png" alt="IVARS logo" class="h-10">
+        <img src="assets/ivars_logo_final.png" alt="IVARS logo" class="h-10" style="background: transparent; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));">
         <div>
-          <div class="font-semibold text-red-600">Institute of Vastu and Astro Research Studies</div>
-          <div class="text-sm italic text-indigo-300">Adding Value, Impacting lives.</div>
+          <div class="font-semibold text-white">Institute of Vastu and Astro Research Studies</div>
+          <div class="text-sm italic text-white/80">Adding Value, Impacting lives.</div>
         </div>
       </div>
       <div class="mt-4 md:mt-0 text-sm text-gray-300">
