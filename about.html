@@ -18,20 +18,20 @@
   </style>
 </head>
 <body>
-<nav class="bg-gradient-to-r from-sky-200 via-sky-700 to-slate-900 text-white shadow-md">
+<nav class="text-white shadow-md" style="background: linear-gradient(90deg, #ff6b95 0%, #b33aa6 50%, #7b2096 100%); background-size: 200% 200%; box-shadow: 0 10px 30px rgba(179,58,166,0.12);">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Top row: logo + institute name (no-wrap) + small tagline -->
     <div class="flex items-center justify-between py-3 md:py-5">
-      <a href="index.html" class="flex items-center gap-3">
+    <a href="index.html" class="flex items-center gap-3">
   <img src="assets/ivars_logo_final.png" alt="Institute of Vastu and Astro Research Studies logo" class="h-10 md:h-20 lg:h-24 flex-shrink-0" style="height:7rem; width:auto; background: transparent; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));">
-        <div class="hidden sm:flex flex-col ml-3">
-          <span class="text-sm md:text-lg lg:text-xl font-semibold uppercase tracking-wide text-slate-900 whitespace-nowrap">Institute of Vastu and Astro Research Studies</span>
-          <span class="text-xs text-slate-700 italic">Adding Value, Impacting lives.</span>
+        <div class="hidden sm:flex flex-col ml-3 w-full">
+          <span class="font-semibold uppercase tracking-wide text-white whitespace-nowrap" style="font-size:1.5rem;">Institute of Vastu and Astro Research Studies</span>
+          <span class="text-xs text-white/90 italic self-end text-right">Adding Value, Impacting lives.</span>
         </div>
       </a>
 
       <div class="hidden md:flex items-center gap-4">
-        <a href="contact.html" class="inline-block bg-white text-purple-700 px-4 py-2 rounded-full font-semibold shadow hover:opacity-95">Book Appointment</a>
+        <a href="contact.html" class="inline-block bg-white text-slate-900 px-4 py-2 rounded-full font-semibold shadow hover:opacity-95">Book Appointment</a>
       </div>
 
       <div class="md:hidden">
@@ -51,8 +51,8 @@
       <a href="contact.html" class="px-3 py-2 rounded-md text-white/95 hover:bg-white/20 transition font-medium">Contact</a>
     </div>
 
-  <!-- Mobile menu (unchanged) -->
-  <div id="mobileMenu" class="md:hidden hidden pb-4 bg-gradient-to-b from-slate-800 to-slate-900 rounded-b-lg mt-2">
+    <!-- Mobile menu (unchanged) -->
+  <div id="mobileMenu" class="md:hidden hidden pb-4 rounded-b-lg mt-2" style="background: linear-gradient(180deg, #b33aa6 0%, #ff6b95 60%, #7b2096 100%); box-shadow: 0 6px 16px rgba(179,58,166,0.10);">
       <a href="index.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Home</a>
       <a href="about.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">About</a>
       <a href="services.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Services</a>
@@ -60,7 +60,7 @@
       <a href="success.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Success Stories</a>
       <a href="contact.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Contact</a>
       <div class="px-4 pt-2 pb-4">
-        <a href="contact.html" class="block w-full text-center bg-white text-purple-700 px-4 py-2 rounded-full font-semibold">Book a consult</a>
+        <a href="contact.html" class="block w-full text-center bg-white px-4 py-2 rounded-full font-semibold" style="color: #b33aa6;">Book a consult</a>
       </div>
     </div>
   </div>
@@ -68,7 +68,7 @@
 
 <div class="max-w-5xl mx-auto p-6 main-canvas">
   <img src="assets/banner1.png" class="rounded-xl shadow-xl mb-6">
-  <div class="bg-white p-6 rounded-xl shadow-xl">
+  <div class="p-6 rounded-xl shadow-xl">
     <h2 class="text-3xl font-bold mb-2">About Us</h2>
   <p class="text-indigo-600 font-semibold mb-4">Institute of Vastu and Astro Research Studies (IVARS)</p>
   <p class="text-gray-600 italic mb-6">Adding Value, Impacting lives.</p>
@@ -111,11 +111,20 @@
 
   <!-- Team / Members gallery -->
   <section class="max-w-5xl mx-auto p-6">
-    <div class="bg-white p-6 rounded-xl shadow-xl mt-8">
+    <div class="p-6 rounded-xl shadow-xl mt-8">
       <h3 class="text-2xl font-bold mb-4">Our Team & Members</h3>
       <p class="text-gray-600 mb-4">Meet the people behind IVARS. Click any photo to view full size.</p>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <figure class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <a href="assets/members/Photo%20of%20Mr.%20Samarendra%20Mohanty%20-President%20and%20Board%20Member.jpg" target="_blank" class="block">
+            <img src="assets/members/Photo of Mr. Samarendra Mohanty -President and Board Member.jpg" alt="Samarendra Mohanty" class="w-full h-44 object-cover members-thumb">
+          </a>
+          <figcaption class="p-3 text-center">
+            <div class="text-sm font-semibold text-slate-900">Dr. Samarendra Mohanty</div>
+            <div class="text-xs text-gray-500 mt-1">President and Board Member</div>
+          </figcaption>
+        </figure>
         <figure class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
           <a href="assets/members/Photo%20of%20Mr.%20Alokjyoti%20Mohanty,%20Secretary%20and%20Board%20Member.jpg" target="_blank" class="block">
             <img src="assets/members/Photo of Mr. Alokjyoti Mohanty, Secretary and Board Member.jpg" alt="Alokjyoti Mohanty" class="w-full h-44 object-cover members-thumb">
@@ -123,6 +132,25 @@
           <figcaption class="p-3 text-center">
             <div class="text-sm font-semibold text-slate-900">Mr. Alokjyoti Mohanty</div>
             <div class="text-xs text-gray-500 mt-1">Secretary and Board Member</div>
+          </figcaption>
+        </figure>
+        <figure class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <a href="assets/members/Photo%20of%20Mr.%20Rabindra%20Kumar%20Dash,%20Advisor,%20IVARS.jpg" target="_blank" class="block">
+            <img src="assets/members/Photo of Mr. Rabindra Kumar Dash, Advisor, IVARS.jpg" alt="Rabindra Kumar Dash" class="w-full h-44 object-cover members-thumb">
+          </a>
+          <figcaption class="p-3 text-center">
+            <div class="text-sm font-semibold text-slate-900">Mr. Rabindra Kumar Dash</div>
+            <div class="text-xs text-gray-500 mt-1">Advisor, IVARS</div>
+          </figcaption>
+        </figure>
+
+        <figure class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <a href="assets/members/Photo%20of%20Ms.%20Prativa%20Mohanty-Treasurer%20and%20Board%20Member.jpg" target="_blank" class="block">
+            <img src="assets/members/Photo of Ms. Prativa Mohanty-Treasurer and Board Member.jpg" alt="Prativa Mohanty" class="w-full h-44 object-cover members-thumb">
+          </a>
+          <figcaption class="p-3 text-center">
+            <div class="text-sm font-semibold text-slate-900">Ms. Prativa Mohanty</div>
+            <div class="text-xs text-gray-500 mt-1">Treasurer and Board Member</div>
           </figcaption>
         </figure>
 
@@ -137,22 +165,12 @@
         </figure>
 
         <figure class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <a href="assets/members/Photo%20of%20Mr.%20Rabindra%20Kumar%20Dash,%20Advisor,%20IVARS.jpg" target="_blank" class="block">
-            <img src="assets/members/Photo of Mr. Rabindra Kumar Dash, Advisor, IVARS.jpg" alt="Rabindra Kumar Dash" class="w-full h-44 object-cover members-thumb">
+          <a href="assets/members/Photo%20of%20Ms.%20Jyotsnamayee%20Mohanty-Board%20Member.jpg" target="_blank" class="block">
+            <img src="assets/members/Photo of Ms. Jyotsnamayee Mohanty-Board Member.jpg" alt="Jyotsnamayee Mohanty" class="w-full h-44 object-cover members-thumb">
           </a>
           <figcaption class="p-3 text-center">
-            <div class="text-sm font-semibold text-slate-900">Mr. Rabindra Kumar Dash</div>
-            <div class="text-xs text-gray-500 mt-1">Advisor, IVARS</div>
-          </figcaption>
-        </figure>
-
-        <figure class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <a href="assets/members/Photo%20of%20Mr.%20Samarendra%20Mohanty%20-President%20and%20Board%20Member.jpg" target="_blank" class="block">
-            <img src="assets/members/Photo of Mr. Samarendra Mohanty -President and Board Member.jpg" alt="Samarendra Mohanty" class="w-full h-44 object-cover members-thumb">
-          </a>
-          <figcaption class="p-3 text-center">
-            <div class="text-sm font-semibold text-slate-900">Mr. Samarendra Mohanty</div>
-            <div class="text-xs text-gray-500 mt-1">President and Board Member</div>
+            <div class="text-sm font-semibold text-slate-900">Ms. Jyotsnamayee Mohanty</div>
+            <div class="text-xs text-gray-500 mt-1">Board Member (Retd. Architectural Engineer)</div>
           </figcaption>
         </figure>
 
@@ -166,45 +184,29 @@
           </figcaption>
         </figure>
 
-        <figure class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <a href="assets/members/Photo%20of%20Ms.%20Jyotsnamayee%20Mohanty-Board%20Member.jpg" target="_blank" class="block">
-            <img src="assets/members/Photo of Ms. Jyotsnamayee Mohanty-Board Member.jpg" alt="Jyotsnamayee Mohanty" class="w-full h-44 object-cover members-thumb">
-          </a>
-          <figcaption class="p-3 text-center">
-            <div class="text-sm font-semibold text-slate-900">Ms. Jyotsnamayee Mohanty</div>
-            <div class="text-xs text-gray-500 mt-1">Board Member</div>
-          </figcaption>
-        </figure>
+        
 
-        <figure class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <a href="assets/members/Photo%20of%20Ms.%20Prativa%20Mohanty-Treasurer%20and%20Board%20Member.jpg" target="_blank" class="block">
-            <img src="assets/members/Photo of Ms. Prativa Mohanty-Treasurer and Board Member.jpg" alt="Prativa Mohanty" class="w-full h-44 object-cover members-thumb">
-          </a>
-          <figcaption class="p-3 text-center">
-            <div class="text-sm font-semibold text-slate-900">Ms. Prativa Mohanty</div>
-            <div class="text-xs text-gray-500 mt-1">Treasurer and Board Member</div>
-          </figcaption>
-        </figure>
+        
       </div>
     </div>
   </section>
 
-  <footer class="bg-gradient-to-r from-sky-200 via-sky-700 to-slate-900 text-white mt-12">
+  <footer class="text-white mt-12" style="background: linear-gradient(90deg, #ff6b95 0%, #b33aa6 50%, #7b2096 100%); background-size: 200% 200%; box-shadow: 0 -6px 24px rgba(123,32,150,0.10);">
     <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
       <div class="flex items-center gap-3">
-  <img src="assets/ivars_logo_final.png" alt="IVARS logo" class="h-10" style="height:7rem; width:auto; background: transparent; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));">
+  <img src="assets/ivars_logo_final.png" alt="IVARS logo" class="h-10" style="height:5rem; width:auto; background: transparent; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));">
         <div>
           <div class="font-semibold text-white">Institute of Vastu and Astro Research Studies</div>
-          <div class="text-sm italic text-white/80">Adding Value, Impacting lives.</div>
+          <div class="text-sm italic text-white/90 text-right">Adding Value, Impacting lives.</div>
         </div>
       </div>
-      <div class="mt-4 md:mt-0 text-sm text-gray-300">
+      <div class="mt-4 md:mt-0 text-sm text-white/90">
         <a href="contact.html" class="hover:text-white mr-4">Contact</a>
         <a href="index.html" class="hover:text-white mr-4">Home</a>
         <a href="services.html" class="hover:text-white">Services</a>
       </div>
     </div>
-    <div class="text-center text-sm text-gray-400 py-3">© <span id="year-about">2025</span> IVARS — All rights reserved.</div>
+    <div class="text-center text-sm text-white/80 py-3">© <span id="year-about">2025</span> IVARS — All rights reserved.</div>
   </footer>
 
   <script>document.getElementById('year-about').textContent = new Date().getFullYear();</script>

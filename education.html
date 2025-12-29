@@ -16,18 +16,19 @@
     /* Site canvas: full-page ivory background and a soft transition into white content */
     body { background-color: #FFFFF0; }
     .main-canvas { background: #FFFFF0; }
+    .bg-custom-ivars { background-color: rgb(249 250 250); }
   </style>
 </head>
 <body>
-<nav class="bg-gradient-to-r from-sky-200 via-sky-700 to-slate-900 text-white shadow-md">
+<nav class="text-white shadow-md" style="background: linear-gradient(90deg, #ff6b95 0%, #b33aa6 50%, #7b2096 100%); background-size: 200% 200%; box-shadow: 0 10px 30px rgba(179,58,166,0.12);">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Top row: logo + institute name (no-wrap) + small tagline -->
     <div class="flex items-center justify-between py-3 md:py-5">
-      <a href="index.html" class="flex items-center gap-3">
+    <a href="index.html" class="flex items-center gap-3">
   <img src="assets/ivars_logo_final.png" alt="Institute of Vastu and Astro Research Studies logo" class="h-10 md:h-20 lg:h-24 flex-shrink-0" style="height:7rem; width:auto; background: transparent; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));">
-        <div class="hidden sm:flex flex-col ml-3">
-          <span class="text-sm md:text-lg lg:text-xl font-semibold uppercase tracking-wide text-slate-900 whitespace-nowrap">Institute of Vastu and Astro Research Studies</span>
-          <span class="text-xs text-slate-700 italic">Adding Value, Impacting lives.</span>
+        <div class="hidden sm:flex flex-col ml-3 w-full">
+          <span class="font-semibold uppercase tracking-wide text-white whitespace-nowrap" style="font-size:1.5rem;">Institute of Vastu and Astro Research Studies</span>
+          <span class="text-xs text-white/90 italic self-end text-right">Adding Value, Impacting lives.</span>
         </div>
       </a>
 
@@ -53,7 +54,7 @@
     </div>
 
     <!-- Mobile menu (unchanged) -->
-  <div id="mobileMenu" class="md:hidden hidden pb-4 bg-gradient-to-b from-slate-800 to-slate-900 rounded-b-lg mt-2">
+  <div id="mobileMenu" class="md:hidden hidden pb-4 rounded-b-lg mt-2" style="background: linear-gradient(180deg, #b33aa6 0%, #ff6b95 60%, #7b2096 100%); box-shadow: 0 6px 16px rgba(179,58,166,0.10);">
       <a href="index.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Home</a>
       <a href="about.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">About</a>
       <a href="services.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Services</a>
@@ -61,7 +62,7 @@
       <a href="success.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Success Stories</a>
       <a href="contact.html" class="block py-2 px-4 text-white/95 hover:bg-white/10">Contact</a>
       <div class="px-4 pt-2 pb-4">
-        <a href="contact.html" class="block w-full text-center bg-white text-purple-700 px-4 py-2 rounded-full font-semibold">Book a consult</a>
+        <a href="contact.html" class="block w-full text-center bg-white px-4 py-2 rounded-full font-semibold" style="color: #b33aa6;">Book a consult</a>
       </div>
     </div>
   </div>
@@ -70,7 +71,7 @@
 <div class="max-w-5xl mx-auto p-6 main-canvas">
   <img src="assets/banner3.png" class="rounded-xl shadow-xl mb-6">
 
-  <section class="bg-white p-6 rounded-xl shadow-xl">
+  <section class="p-6 rounded-xl shadow-xl">
     <h2 class="text-3xl font-bold mb-4">Education & Training</h2>
 
     <p class="text-gray-700 mb-4">Now a days demand grows on these subjects, but in absence of proper teacher, little and wrong learning can be harmful. We offer comprehensive training programs in Vastu, Astrology and Numerology — taught by experts combining Vedic wisdom with modern analytical approaches.</p>
@@ -78,7 +79,7 @@
     <p class="text-gray-700 mb-4">We conduct online classes, workshops, and certification courses for convenient learning. We also run offline classes featuring close discussion and participatory analytical methods for deeper understanding.</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-      <div class="fade-slide bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:0ms">
+      <div class="fade-slide bg-custom-ivars p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:0ms">
         <div class="flex items-start gap-3">
           <!-- calendar icon -->
           <svg class="w-8 h-8 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -93,7 +94,7 @@
         </div>
       </div>
 
-      <div class="fade-slide bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:70ms">
+      <div class="fade-slide bg-custom-ivars p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:70ms">
         <div class="flex items-start gap-3">
           <!-- classroom / users icon -->
           <svg class="w-8 h-8 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -107,7 +108,7 @@
         </div>
       </div>
 
-      <div class="fade-slide bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:140ms">
+      <div class="fade-slide bg-custom-ivars p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:140ms">
         <div class="flex items-start gap-3">
           <!-- home / vastu icon -->
           <svg class="w-8 h-8 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -121,7 +122,7 @@
         </div>
       </div>
 
-      <div class="fade-slide bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:210ms">
+      <div class="fade-slide bg-custom-ivars p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:210ms">
         <div class="flex items-start gap-3">
           <!-- star / astrology icon -->
           <svg class="w-8 h-8 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -134,7 +135,7 @@
         </div>
       </div>
 
-      <div class="fade-slide bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:280ms">
+      <div class="fade-slide bg-custom-ivars p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:280ms">
         <div class="flex items-start gap-3">
           <!-- numerology / dial icon -->
           <svg class="w-8 h-8 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -151,7 +152,7 @@
         </div>
       </div>
 
-      <div class="fade-slide bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:350ms">
+      <div class="fade-slide bg-custom-ivars p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition" style="transition-delay:350ms">
         <div class="flex items-start gap-3">
           <!-- certificate icon -->
           <svg class="w-8 h-8 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -167,7 +168,7 @@
       </div>
     </div>
 
-    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100 mb-6">
+    <div class="bg-custom-ivars p-4 rounded-lg border border-gray-100 mb-6">
       <h3 class="font-semibold mb-2">We offer</h3>
       <ul class="list-disc pl-5 text-gray-700">
         <li>Online Classes: Vastu, Astrology and Numerology</li>
@@ -185,26 +186,25 @@
       <a href="contact.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg shadow hover:bg-indigo-700">Enrol / Enquire</a>
     </div>
   </section>
-
-  <footer class="bg-gradient-to-r from-sky-200 via-sky-700 to-slate-900 text-white mt-12">
+</div>
+  <footer class="text-white mt-12" style="background: linear-gradient(90deg, #ff6b95 0%, #b33aa6 50%, #7b2096 100%); background-size: 200% 200%; box-shadow: 0 -6px 24px rgba(123,32,150,0.10);">
     <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
       <div class="flex items-center gap-3">
-  <img src="assets/ivars_logo_final.png" alt="IVARS logo" class="h-10" style="height:7rem; width:auto; background: transparent; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));">
+  <img src="assets/ivars_logo_final.png" alt="IVARS logo" class="h-10" style="height:5rem; width:auto; background: transparent; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));">
         <div>
           <div class="font-semibold text-white">Institute of Vastu and Astro Research Studies</div>
-          <div class="text-sm italic text-white/80">Adding Value, Impacting lives.</div>
+          <div class="text-sm italic text-white/90 text-right">Adding Value, Impacting lives.</div>
         </div>
       </div>
-      <div class="mt-4 md:mt-0 text-sm text-gray-300">
+      <div class="mt-4 md:mt-0 text-sm text-white/90">
         <a href="contact.html" class="hover:text-white mr-4">Contact</a>
         <a href="about.html" class="hover:text-white mr-4">About</a>
         <a href="services.html" class="hover:text-white">Services</a>
       </div>
     </div>
-    <div class="text-center text-sm text-gray-400 py-3">© <span id="year-education">2025</span> IVARS — All rights reserved.</div>
+    <div class="text-center text-sm text-white/80 py-3">© <span id="year-education">2025</span> IVARS — All rights reserved.</div>
   </footer>
 
-</footer>
   <script>document.getElementById('year-education').textContent = new Date().getFullYear();</script>
   <script>
     (function(){
