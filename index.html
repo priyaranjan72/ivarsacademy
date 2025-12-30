@@ -18,6 +18,18 @@
     body { background-color: #FFFFF0; }
     .main-canvas { background: #FFFFF0; }
     .bg-custom-ivars { background-color: rgb(249 250 250); }
+    /* Larger carousel height for better visual impact */
+    #heroSlider .carousel-inner .carousel-item > img,
+    #heroSlider .carousel-inner .carousel-item > video {
+      height: 520px;
+      object-fit: cover;
+    }
+    @media (min-width: 768px) {
+      #heroSlider .carousel-inner .carousel-item > img,
+      #heroSlider .carousel-inner .carousel-item > video {
+        height: 540px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -75,6 +87,12 @@
 <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
+      <video class="d-block w-100 h-60 sm:h-72 md:h-96 object-cover object-center" autoplay muted loop playsinline preload="metadata" poster="assets/banner_2_new.png" aria-label="Hero banner video">
+        <source src="assets/banner-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="carousel-item">
       <img src="assets/banner_2_new.png" class="d-block w-100 h-60 sm:h-72 md:h-96 object-cover object-center" alt="Hero banner 1">
     </div>
     <div class="carousel-item">
@@ -405,6 +423,25 @@
       <a href="contact.html" class="hover:text-white mr-4">Contact</a>
       <a href="about.html" class="hover:text-white mr-4">About</a>
       <a href="services.html" class="hover:text-white">Services</a>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-6 py-4">
+    <div id="visitor-counter" class="flex flex-col sm:flex-row sm:justify-end gap-3 items-center mb-3">
+      <div class="bg-white/5 text-white px-3 py-2 rounded-lg flex items-center gap-3 shadow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+        <div class="text-left">
+          <div class="text-xs text-gray-200">Total visits</div>
+          <div id="totalVisits" class="text-lg font-semibold">—</div>
+        </div>
+      </div>
+
+      <div class="bg-white/5 text-white px-3 py-2 rounded-lg flex items-center gap-3 shadow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
+        <div class="text-left">
+          <div class="text-xs text-gray-200">Today's visits</div>
+          <div id="todayVisits" class="text-lg font-semibold">—</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="text-center text-sm text-white/80 py-3">© <span id="year">2025</span> IVARS — All rights reserved.</div>
