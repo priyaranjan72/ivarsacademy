@@ -484,7 +484,7 @@
   (function(){
     var totalEl = document.getElementById('totalVisits');
     var todayEl = document.getElementById('todayVisits');
-    var namespace = 'ivarsacademy';
+    var namespace = 'ivarsacademy_live';
     var totalKey = 'visitors_total';
     // Compute current date string in IST (UTC+5:30) so "today" resets at IST midnight
     function getISTDateStr(){
@@ -515,7 +515,7 @@
     }
 
     // Only increment once per browser session (avoid double increments on refresh)
-    var sessionFlag = 'ivars_counted';
+    var sessionFlag = 'ivars_counted_live';
 
     (async function(){
       try{
